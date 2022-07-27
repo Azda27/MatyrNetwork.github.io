@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: #ad20ff;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(223, 0, 0);
+}
+
+/* hyperlink */
+nav {
+  display: flex;
+  background-color: rgb(255, 0, 0);
+  justify-content: space-around;
+  padding: 20px 0px;
+  height: 60px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 110%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: rgb(206, 206, 206);
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+/* hamburger menu */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.Copy {
+  cursor: pointer;
+}
+/* top */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background-color: rgb(255, 130, 130);
+}
+
+.server-info {
+  align-items: center;
+  text-align: center;
+}
+.ip-Copy {
+  align-items: initial;
+  text-align: center;
+}
+.ip-Copy input {
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: default;
+}
+.port-Copy {
+  align-items: initial;
+  text-align: center;
+}
+.port-Copy input {
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: default;
+}
+#popup0,
+#popup1 {
+  visibility: hidden;
+  width: 250px;
+  margin-left: -125px;
+  background-color: #c039ff;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 50px;
+}
+#popup0.show,
+#popup1.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+/* Ressponsive Breakpoint */
+
+/* Tablet size */
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+/* Mobile screen */
+
+@media screen and (max-width: 600px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: -1;
+    background-color: red;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  nav ul li a {
+    border: solid 2px;
+    color: rgb(0, 0, 0);
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    border-radius: 8px;
+    margin-top: px;
+  }
+  nav ul li a:hover {
+    color: whitesmoke;
+  }
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+  }
+}
