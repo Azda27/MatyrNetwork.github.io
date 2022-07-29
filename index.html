@@ -32,7 +32,21 @@
       <h4 id="version">Version:1.8 - 1.18.2</h4>
     </div>
     <br />
-    <div>
+    <br />
+    <div class="tab">
+      <button class="tablink" onclick="openPage('Home')"id="defaultOpen">Home</button>
+      <button class="tablink" onclick="openPage('News')">News</button>
+    </div>
+    
+    <div id="Home" class="tabcontent">
+      <h3>Home</h3>
+      <p>Home is where the heart is..</p>
+    </div>
+    
+    <div id="News" class="tabcontent">
+      <h3>News</h3>
+      <p>Some news this fine day!</p>
+    </div>
       <div class="ip-Copy">
         <input type="text" value="MatyrNetwork.my.id" id="Copy0" />
         <button onclick="ipserver()">Copy</button>
@@ -47,4 +61,5 @@
     </div>
   </body>
   <script src="js/script1.js"></script>
+  <script src="js/LiveChat.js"></script>
 </html>
