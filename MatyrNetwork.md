@@ -1,2 +1,0 @@
-# MatyrNetwork
-© MatyrNetwork2022
