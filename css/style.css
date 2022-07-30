@@ -24,6 +24,11 @@
   background: rgb(223, 0, 0);
 }
 
+.logo h4 a {
+  text-decoration: none;
+  font-size: 22pt;
+  list-style: none;
+}
 /* hyperlink */
 nav {
   display: flex;
@@ -104,9 +109,6 @@ nav ul li a {
   transform: rotate(-45deg) translate(-1px, 0);
 }
 
-.Copy {
-  cursor: pointer;
-}
 /* top */
 
 #myBtn {
@@ -159,6 +161,7 @@ nav ul li a {
   background: none;
 }
 /* Set height of body and the document to 100% to enable "full page tabs" */
+
 body,
 html {
   height: 100%;
@@ -166,30 +169,37 @@ html {
   font-family: Arial;
 }
 
-.tab {
-  align-items: center;
-}
-/* Style tab links */
-.tablink {
-  background-color: #555;
+.tablink0,
+.tablink1 {
   color: black;
+  float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  font-size: 14pt;
+  font-size: 17px;
+  width: 15%;
 }
-
-.tablink:hover {
+.tablink0 {
+  margin-left: 35%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.tablink1 {
+  margin-left: 0%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.tablink0:hover,
+.tablink1:hover {
   background-color: #777;
 }
-
-/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: black;
-  align-items: center;
-  text-align: center;
+  color: rgb(0, 0, 0);
+  display: none;
+  padding: 100px 20px;
   height: 100%;
+  text-align: center;
 }
 #popup0,
 #popup1 {
