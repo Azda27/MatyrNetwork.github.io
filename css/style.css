@@ -24,18 +24,12 @@
   background: rgb(223, 0, 0);
 }
 
-.logo h4 a {
-  text-decoration: none;
-  font-size: 22pt;
-  list-style: none;
-}
 /* hyperlink */
 nav {
   display: flex;
   background-color: rgb(255, 0, 0);
-  justify-content: space-around;
-  padding: 20px 0px;
-  height: 60px;
+  justify-content: space-evenly;
+  height: 50px;
   align-items: center;
   position: fixed;
   top: 0;
@@ -52,7 +46,7 @@ nav ul {
 nav ul li a {
   color: rgb(206, 206, 206);
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 12pt;
 }
 
 /* hamburger menu */
@@ -108,29 +102,6 @@ nav ul li a {
   background-color: white;
   transform: rotate(-45deg) translate(-1px, 0);
 }
-
-/* top */
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
-
-#myBtn:hover {
-  background-color: rgb(255, 130, 130);
-}
-
 .server-info {
   align-items: center;
   text-align: center;
@@ -325,4 +296,10 @@ html {
     width: 35px;
     border-radius: 50%;
   }
+}
+
+.logo a {
+  font-family: bungee, sans-serif;
+  color: white;
+  text-decoration: none;
 }
