@@ -117,9 +117,9 @@ nav ul li a {
   cursor: default;
   background: none;
 }
-.ip-Copy button {
-  width: 50px;
-}
+/* .ip-Copy button { */
+/* width: 40px; */
+/* } */
 .port-Copy {
   align-items: initial;
   text-align: center;
@@ -130,14 +130,6 @@ nav ul li a {
   outline: none;
   cursor: default;
   background: none;
-}
-/* Set height of body and the document to 100% to enable "full page tabs" */
-
-body,
-html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
 }
 
 .tablink0,
@@ -150,16 +142,17 @@ html {
   padding: 14px 16px;
   font-size: 17px;
   width: 15%;
+  background-color: aquamarine;
 }
 .tablink0 {
   margin-left: 35%;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .tablink1 {
   margin-left: 0%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .tablink0:hover,
 .tablink1:hover {
@@ -171,9 +164,12 @@ html {
   padding: 100px 20px;
   height: 100%;
   text-align: center;
+  align-items: center;
+  justify-content: space-between;
 }
 #popup0,
-#popup1 {
+#popup1,
+#popup2 {
   visibility: hidden;
   width: 250px;
   margin-left: -125px;
@@ -188,7 +184,8 @@ html {
   bottom: 50px;
 }
 #popup0.show,
-#popup1.show {
+#popup1.show,
+#popup2.show {
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;

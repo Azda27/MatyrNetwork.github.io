@@ -7,7 +7,7 @@ menuToggle.addEventListener("click", function () {
 });
 // copy
 //  Ip-Server
-function ipserver() {
+function javaip() {
   var copyText = document.getElementById("Copy0");
   copyText.select();
   copyText.setSelectionRange(0, 99999);
@@ -18,13 +18,24 @@ function ipserver() {
     x.className = x.className.replace("show", "");
   }, 3000);
 }
-// Port-Server
-function portserver() {
+function bedip() {
   var copyText = document.getElementById("Copy1");
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(copyText.value);
   var x = document.getElementById("popup1");
+  x.className = "show";
+  setTimeout(function () {
+    x.className = x.className.replace("show", "");
+  }, 3000);
+}
+// Port-Server
+function bedport() {
+  var copyText = document.getElementById("Copy2");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  var x = document.getElementById("popup2");
   x.className = "show";
   setTimeout(function () {
     x.className = x.className.replace("show", "");

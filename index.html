@@ -105,8 +105,7 @@
       <h2>Join now</h2>
       <h4 id="version">Version:1.8 - 1.18.2</h4>
     </div>
-    <br />
-    <br />
+    <br /><br />
 
     <button class="tablink0" onclick="openPage('Java')" id="defaultOpen">
       Java
@@ -114,27 +113,34 @@
     <button class="tablink1" onclick="openPage('Bedrock')">Bedrock</button>
 
     <div id="Java" class="tabcontent">
-      <h3>Home</h3>
+      <h2>Java</h2>
       <br />
       <div class="ip-Copy">
-        <input type="text" value="MatyrNetwork.my.id" id="Copy0" />
-        <button onclick="ipserver()">Copy</button>
+        <label for="Java-Ip">Ip Server</label>
+        <input
+          type="text"
+          value="MatyrNetwork.my.id"
+          id="Copy0"
+          name="Java-Ip"
+        />
+        <button onclick="javaip()">Copy</button>
         <div id="popup0">Ip Copied</div>
       </div>
     </div>
 
     <div id="Bedrock" class="tabcontent">
-      <h3>News</h3>
+      <h2>Bedrock</h2>
       <br />
       <div class="ip-Copy">
-        <input type="text" value="MatyrNetwork.my.id" id="Copy0" />
-        <button onclick="ipserver()">Copy</button>
-        <div id="popup0">Ip Copied</div>
+        <input type="text" value="MatyrNetwork.my.id" id="Copy1" />
+        <button onclick="bedip()">Copy</button>
+        <div id="popup1">Ip Copied</div>
+      </div>
         <br /><br />
         <div class="port-Copy">
-          <input type="text" value="MatyrNetwork.my.id" id="Copy1" />
-          <button onclick="portserver()">Copy</button>
-          <div id="popup1">Port Copied</div>
+          <input type="text" value="MatyrNetwork.my.id" id="Copy2" />
+          <button onclick="bedport()">Copy</button>
+          <div id="popup2">Port Copied</div>
         </div>
       </div>
     </div>
