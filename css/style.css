@@ -139,13 +139,13 @@ nav ul li a {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
   font-size: 17px;
   width: 15%;
-  background-color: aquamarine;
+  height: 45px;
+  font-size: 14pt;
 }
 .tablink0 {
-  margin-left: 35%;
+  margin-left: 475px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -160,12 +160,16 @@ nav ul li a {
 }
 .tabcontent {
   color: rgb(0, 0, 0);
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
+  display: block;
+  padding: 100px;
+  height: 350px;
   text-align: center;
   align-items: center;
   justify-content: space-between;
+}
+label {
+  font-size: 12pt;
+  font-weight: bold;
 }
 #popup0,
 #popup1,
@@ -292,6 +296,41 @@ nav ul li a {
     height: 35px;
     width: 35px;
     border-radius: 50%;
+  }
+  .tablink0,
+  .tablink1 {
+    color: black;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    width: 20%;
+    height: 35px;
+    font-size: 10pt;
+  }
+  .tablink0 {
+    margin-left: 130px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .tablink1 {
+    margin-left: 0%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .tablink0:hover,
+  .tablink1:hover {
+    background-color: #777;
+  }
+  .tabcontent {
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 100px;
+    height: 350px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
