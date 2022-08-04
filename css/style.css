@@ -234,6 +234,11 @@ label {
     opacity: 0;
   }
 }
+.logo a {
+  font-family: bungee, sans-serif;
+  color: white;
+  text-decoration: none;
+}
 /* Ressponsive Breakpoint */
 
 /* Tablet size */
@@ -332,10 +337,4 @@ label {
     align-items: center;
     justify-content: space-between;
   }
-}
-
-.logo a {
-  font-family: bungee, sans-serif;
-  color: white;
-  text-decoration: none;
 }
