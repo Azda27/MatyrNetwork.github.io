@@ -26,12 +26,13 @@
 nav {
   display: flex;
   background-color: rgb(255, 0, 0);
-  justify-content: space-evenly;
+  justify-content: space-around;
+  color: white;
   height: 50px;
   align-items: center;
   position: fixed;
   top: 0;
-  width: 110%;
+  width: 100%;
 }
 
 nav ul {
@@ -42,9 +43,10 @@ nav ul {
 }
 
 nav ul li a {
-  color: rgb(206, 206, 206);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 12pt;
+  font-weight: bold;
 }
 
 /* hamburger menu */
@@ -115,9 +117,6 @@ nav ul li a {
   cursor: default;
   background: none;
 }
-/* .ip-Copy button { */
-/* width: 40px; */
-/* } */
 .port-Copy {
   align-items: initial;
   text-align: center;
@@ -129,7 +128,21 @@ nav ul li a {
   cursor: default;
   background: none;
 }
-
+.ip-Copy button,
+.port-Copy button {
+  border: none;
+  outline: none;
+  background-color: rgb(5, 5, 5);
+  width: 50px;
+  height: 20px;
+  border-radius: 6px;
+  color: white;
+}
+.ip-Copy button:hover,
+.port-Copy button:hover {
+  background-color: rgb(230, 230, 230);
+  color: black;
+}
 .tablink0,
 .tablink1 {
   color: black;
@@ -236,103 +249,4 @@ label {
   font-family: bungee, sans-serif;
   color: white;
   text-decoration: none;
-}
-/* Ressponsive Breakpoint */
-
-/* Tablet size */
-
-@media screen and (max-width: 768px) {
-  nav ul {
-    width: 50%;
-  }
-}
-
-/* Mobile screen */
-
-@media screen and (max-width: 600px) {
-  .menu-toggle {
-    display: flex;
-  }
-  nav ul {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 80%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    z-index: -1;
-    background-color: red;
-    transform: translateX(100%);
-    transition: all 1s;
-    opacity: 0;
-  }
-  nav ul li a {
-    border: solid 2px;
-    color: rgb(0, 0, 0);
-    width: 300px;
-    height: 40px;
-    text-align: center;
-    display: block;
-    border-radius: 8px;
-    margin-top: px;
-  }
-  nav ul li a:hover {
-    color: whitesmoke;
-  }
-  nav ul.slide {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-  #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    border: none;
-    outline: none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    font-size: 18px;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-  }
-  .tablink0,
-  .tablink1 {
-    color: black;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 17px;
-    width: 20%;
-    height: 35px;
-    font-size: 10pt;
-  }
-  .tablink0 {
-    margin-left: 130px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  .tablink1 {
-    margin-left: 0%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  .tablink0:hover,
-  .tablink1:hover {
-    background-color: #777;
-  }
-  .tabcontent {
-    color: rgb(0, 0, 0);
-    display: block;
-    padding: 100px;
-    height: 350px;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-  }
 }
