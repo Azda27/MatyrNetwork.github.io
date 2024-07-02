@@ -1,4 +1,8 @@
-<?php include 'templates/header.php'; ?>
+<?php
+session_start();
+
+include 'templates/header.php'; 
+?>
 
 <div class="server-info">
   <h1>MatyrNetwork Server !</h1>

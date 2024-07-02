@@ -154,9 +154,20 @@ nav ul li a {
 }
 
 .main {
-  padding: 20px;
+  padding: 30px;
   max-width: 900px;
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+/* boostrap */
+
+.btn-custom {
+  background-color: #874AFF;
+  color: white; /* Ubah warna teks jika perlu */
+}
+
+
+
+
+

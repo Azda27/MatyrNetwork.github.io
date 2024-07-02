@@ -38,10 +38,21 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="forum.php">Forum</a></li>
-            <li><a href="">Discord</a></li>
-            <li><a href="">Shop</a></li>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">Staff</a></li>
+            <li><a href="#">Shop</a></li>
+            <?php if (isset($_SESSION['user_id'])) : ?>
+                <li><a href="logout.php">Logout</a></li>
+            <?php else : ?>
+                <li class="dropdown" onmouseover="changeText(this)">
+                    <a href="#" class="dropbtn">Login/Register ▼</a>
+                    <div class="dropdown-content">
+                        <a href="login.php">Login</a>
+                        <a href="register.php">Register</a>
+                    </div>
+                </li>
+            <?php endif; ?>
         </ul>
-
         <div class="menu-toggle">
             <input type="checkbox" />
             <span></span>
@@ -49,4 +60,43 @@
             <span></span>
         </div>
     </nav>
+
     <br /><br /><br /><br />
+
+    <style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+    <script>
+        function changeText(element) {
+            var dropbtn = element.querySelector('.dropbtn');
+
+            dropbtn.textContent = 'Login/Register ▲';
+
+            element.onmouseleave = function() {
+                dropbtn.textContent = 'Login/Register ▼';
+            };
+        }
+    </script>
